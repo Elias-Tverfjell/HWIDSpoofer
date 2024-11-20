@@ -1,0 +1,31 @@
+name: Publish HWIDLib to PyPI
+
+on:
+  push:
+    tags:
+      - 'v1.0'
+
+jobs:
+  publish:
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.13'
+
+    - name: Install dependencies
+      run: pip install build twine
+
+    - name: Build HWIDLib package
+      run: python -m build
+
+    - name: Publish HWIDLib to PyPI
+      env:
+        TWINE_USERNAME: ${{ secrets.PYPI_USERNAME }}
+        TWINE_PASSWORD: ${{ secrets.PYPI_PASSWORD }}
+      run: python -m twine upload dist/*
