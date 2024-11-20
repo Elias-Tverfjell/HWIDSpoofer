@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "HWIDLib"
+version = "1.0"
+description = "A library for getting or modifing hardware IDs on Windows"
+authors = ["Elias Tverfjell <elias.tverfjell@gmail.com>"]
+license = "GPL-3.0"
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU General Public License v3.0 (GPL-3.0)",
+    "Operating System :: OS Independent",
+]
+
+[tool.poetry.dependencies]
+python = "^3.13"
