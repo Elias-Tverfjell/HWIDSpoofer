@@ -1,6 +1,5 @@
 import uuid
 import winreg
-import sys
 
 def random_hwid():
     new_hwid = str(uuid.uuid4())
