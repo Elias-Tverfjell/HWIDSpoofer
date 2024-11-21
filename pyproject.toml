@@ -4,7 +4,7 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry]
 name = "HWIDLib"
-version = "1.0"
+version = "1.2"
 description = "A library for getting or modifing hardware IDs on Windows"
 authors = ["Elias Tverfjell <elias.tverfjell@gmail.com>"]
 license = "GPL-3.0"
